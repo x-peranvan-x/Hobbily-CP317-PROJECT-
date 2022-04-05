@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbily Home</title>
+  <link rel="icon" href="icon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+  color:white;
+}
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/message">Random Connect</a></li>
+    <li><a href="/userprofile">User Profile</a></li>
+    <li style="background-color: red;"><a href="/logout">Logout</a></li>
+    <li><a href="/home"> <img src="logo.png" style="position: absolute;right:0; top:0; width: 10%; height: 7.5%; outline-color: #333;" alt=""></a></li>
+  </ul>
+  <h5>Hi <%= name %></h5>
+  <div class="container">
+    <% posts.forEach(article => { %>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h4 class="card-title"><%= article.post_title %></h4>
+          <div class="card-subtitle text-muted mb-2">
+          </div>
+          <div class="user">
+            <h6 style="float: right;"><%=article.username%></h6>
+          </div>
+          <div class="card-text mb-2"><%= article.post %></div>
+          <a href="" class="btn btn-primary">Read More</a>
+          <a href="" class="btn btn-info">Edit</a>
+          <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+          </form>
+        </div>
+      </div>
+    <% }) %>
+    
+  </div>
+  
+
+  
+</body>
+</html>
