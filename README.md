@@ -15,8 +15,8 @@ Functionalities Included
 Functionalities Not included  
 -Random Connect  
 -Admin/Mod Roles  
--Password/Username Validation
--Liking Posts
+-Password/Username Validation  
+-Liking Posts  
 -Commenting  
 -Fully Viewing Post  
 -Editing/ Deleting Post(s)  
