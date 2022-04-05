@@ -10,6 +10,7 @@ Functionalities Included
 -Post Creation  
 -User Profile Page  
 -Logout  
+-View Posts by Community
 
 Functionalities Not included  
 -Random Connect  
