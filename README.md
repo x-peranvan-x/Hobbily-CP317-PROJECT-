@@ -1,7 +1,7 @@
 # Hobbily-CP317-PROJECT-
 
 HOW TO RUN THE PROJECT:  
-You must have node installed.Please write in your console, npm run devstart in order to run the project. Then go to localhost:3000
+You must have node js,mysql, and the libraries used in this project (express, mysql, bodyparser) installed. You will need to make sure that in the file user_db.js, your proper credentials for logging into mysql are entered rather than the credentials currently used. Please write in your console, npm run devstart in order to run the project. Then go to localhost:3000, and the website should be available.
 
 Functionalities Included  
 -Community Creation  
